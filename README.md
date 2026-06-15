@@ -1,12 +1,12 @@
 Very, VERY early release of the USBArmyKnife firmware made to be simply flashed and just work, utilising the full 16MB SPI Flash and 8MB PSRAM that the Pocket-Dongle-S3 from AliExpress provides, unlike a basic ESP32-S3 image that only enables 8MB of Flash and NO PSRAM.
 
 What to 𝙚𝙭𝙥𝙚𝙘𝙩:
-     • Your device might not boot it, simple. ¯\_(ツ)_/¯
-     • If it does boot, keep in mind that this release is WAY too early to use normally, even if everything functions.
-     • Thats it.
+     * Your device might not boot it, simple. ¯\_(ツ)_/¯
+     * If it does boot, keep in mind that this release is WAY too early to use normally, even if everything functions.
+     * Thats it.
 
 For 𝙩𝙚𝙨𝙩𝙚𝙧𝙨:
-     • ABSOLUTELY make sure to email me, both me and the project will benefit a lot from help.
+     * ABSOLUTELY make sure to email me, both me and the project will benefit a lot from help.
 
 If it doesnt work, dont try and fix it. The problem is as simple as putting an AMD CPU in and Intel socket and being confused by why it doent work.
 
