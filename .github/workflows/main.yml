@@ -1,0 +1,125 @@
+name: PlatformIO CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+          key: ${{ runner.os }}-pio
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install PlatformIO Core
+        run: pip install --upgrade platformio
+
+      - name: Build PlatformIO Project LILYGO-T-Dongle-S3 
+        run: pio run --environment LILYGO-T-Dongle-S3 
+
+      - name: Upload LILYGO-T-Dongle-S3 artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: LILYGO-T-Dongle-S3 Firmware binaries
+          path: |
+            .pio/build/LILYGO-T-Dongle-S3/*.bin
+            .pio/build/LILYGO-T-Dongle-S3/*.elf
+
+      - name: Build PlatformIO Project Waveshare-ESP32-S3-LCD-1_47
+        run: pio run --environment Waveshare-ESP32-S3-LCD-1_47
+            
+      - name: Upload Waveshare-ESP32-S3-LCD-1_47 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Waveshare-ESP32-S3-LCD-1_47 Firmware binaries
+          path: |
+            .pio/build/Waveshare-ESP32-S3-LCD-1_47/*.bin
+            .pio/build/Waveshare-ESP32-S3-LCD-1_47/*.elf
+
+      - name: Build PlatformIO Project Generic-ESP32-S2
+        run: pio run --environment Generic-ESP32-S2
+          
+      - name: Upload Generic-ESP32-S2 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Generic-ESP32-S2 Firmware binaries
+          path: |
+            .pio/build/Generic-ESP32-S2/*.bin
+            .pio/build/Generic-ESP32-S2/*.elf
+
+      - name: Build PlatformIO Project Generic-ESP32-S3
+        run: pio run --environment Generic-ESP32-S3
+          
+      - name: Upload Generic-ESP32-S3 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Generic-ESP32-S3 Firmware binaries
+          path: |
+            .pio/build/Generic-ESP32-S3/*.bin
+            .pio/build/Generic-ESP32-S3/*.elf
+
+#      - name: Build PlatformIO Project Waveshare-RP2040-GEEK
+#        run: yes '' | pio run --environment Waveshare-RP2040-GEEK
+
+#      - name: Upload Waveshare-RP2040-GEEK artifact
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: Waveshare-RP2040-GEEK Firmware binaries
+#          path: |
+#            .pio/build/Waveshare-RP2040-GEEK/*.bin
+#            .pio/build/Waveshare-RP2040-GEEK/*.elf
+
+      - name: Build PlatformIO Project M5-Atom-S3U
+        run: pio run --environment M5-Atom-S3U
+              
+      - name: Upload M5-Atom-S3U artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: M5-Atom-S3U Firmware binaries
+          path: |
+            .pio/build/M5-Atom-S3U/*.bin
+            .pio/build/M5-Atom-S3U/*.elf
+
+      - name: Build PlatformIO Project Waveshare-ESP32-S3-GEEK
+        run: pio run --environment Waveshare-ESP32-S3-GEEK
+                
+      - name: Upload Waveshare-ESP32-S3-GEEK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Waveshare-ESP32-S3-GEEK Firmware binaries
+          path: |
+            .pio/build/Waveshare-ESP32-S3-GEEK/*.bin
+            .pio/build/Waveshare-ESP32-S3-GEEK/*.elf
+
+      - name: Build PlatformIO Project LILYGO-T-Watch-S3
+        run: pio run --environment LILYGO-T-Watch-S3
+                
+      - name: Upload LILYGO-T-Watch-S3 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LILYGO-T-Watch-S3 Firmware binaries
+          path: |
+            .pio/build/LILYGO-T-Watch-S3/*.bin
+            .pio/build/LILYGO-T-Watch-S3/*.elf
+
+      - name: Build PlatformIO Project Evil-Crow-Cable-Wind
+        run: pio run --environment Evil-Crow-Cable-Wind
+                
+      - name: Upload Evil-Crow-Cable-Wind artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Evil-Crow-Cable-Wind Firmware binaries
+          path: |
+            .pio/build/Evil-Crow-Cable-Wind/*.bin
+            .pio/build/Evil-Crow-Cable-Wind/*.elf

@@ -1,0 +1,233 @@
+#include "USBCore.h"
+
+#include "USBMSC.h"
+
+#include <Adafruit_TinyUSB.h>
+
+#include "USBNCM.h"
+#include "USBCDC.h"
+#include "USBMSC.h"
+#include "USBHID.h"
+
+#include "../../Debug/Logging.h"
+#define LOG_USB "USB"
+
+#define USB_DeviceType "usbDeviceType"
+#define USB_DeviceType_Default (uint16_t) USBDeviceType::Serial
+
+#define USB_ClassType "usbClassType"
+#define USB_ClassType_Default (uint16_t) USBClassType::HID
+
+#define USB_DeviceVID "usbDeviceVID"
+#define USB_DeviceVID_Default (uint16_t)0xcafe
+
+#define USB_DevicePID "usbDevicePID"
+#define USB_DevicePID_Default (uint16_t)0x403f
+
+#define USB_Version "usbVersion"
+#define USB_Version_Default (uint16_t)0x0101
+
+#define USB_DeviceVersion "usbDevVersion"
+#define USB_DeviceVersion_Default (uint16_t)0x0101
+
+#define USB_DeviceManufacturer "usbDevMfr"
+#define USB_DeviceManufacturer_Default "Espressif Systems"
+
+#define USB_DeviceProductDescriptor "usbDevProdDesc"
+#define USB_DeviceProductDescriptor_Default "TinyUSB Device"
+
+std::string curUSBMode = "NONE";
+
+extern Preferences prefs;
+
+namespace Devices::USB
+{
+  USBCore Core;
+  // devices
+  USBCDCWrapper CDC;
+  USBNCM NCM;
+
+  // classes
+  USBHID HID;
+  USBMSC MSC;
+}
+
+USBCore::USBCore()
+    : curDeviceType(USBDeviceType::None),
+      curClassType(USBClassType::None)
+{
+}
+
+void USBCore::changeUSBMode(DuckyInterpreter::USB_MODE &mode, const uint16_t &vidValue, const uint16_t &pidValue, const std::string &man, const std::string &prod, const std::string &serial)
+{
+  // There are two methods to set a USB device type
+  // * Set boot configuration which set the USB device options as soon as we get power
+  // * No not appear as a USB device when we are plugged in, let the script set the parameters
+
+  if (curDeviceType != USBDeviceType::None)
+  {
+    Debug::Log.warning(LOG_USB, "Device started with USB Device type NOT set to None, this is recommended when using ATTACKMODE command");
+  }
+
+  auto startingMode = curDeviceType;
+
+  if (mode == DuckyInterpreter::USB_MODE::OFF)
+  {
+    Debug::Log.info(LOG_USB, "Changing USB mode to OFF");
+    end();
+    tud_disconnect();
+    curDeviceType = USBDeviceType::None;
+    curClassType = USBClassType::None;
+    return;
+  }
+  else if (mode & DuckyInterpreter::USB_MODE::HID)
+  {
+    Debug::Log.info(LOG_USB, "Changing USB mode to HID");
+    curDeviceType = USBDeviceType::Serial;
+    curClassType = USBClassType::HID;
+  }
+  else if (mode & DuckyInterpreter::USB_MODE::STORAGE)
+  {
+    Debug::Log.info(LOG_USB, "Changing USB mode to STORAGE");
+    curDeviceType = USBDeviceType::Serial;
+    curClassType = USBClassType::Storage;
+  }
+
+  Preferences prefs;
+  prefs.begin("usbarmyknife");
+
+  // these functions are happy with being called twice
+  Devices::USB::CDC.begin(115200);
+  Devices::USB::NCM.begin(prefs);
+  Devices::USB::HID.begin(prefs);
+  Devices::USB::MSC.begin(prefs);
+
+  if (startingMode == USBDeviceType::None && mode != DuckyInterpreter::USB_MODE::OFF)
+  {
+    vid = vidValue == 0 ? prefs.getUShort(USB_DeviceVID, USB_DeviceVID_Default) : vidValue;
+    pid = pidValue == 0 ? prefs.getUShort(USB_DevicePID, USB_DevicePID_Default) : pidValue;
+
+    manufacturer = man;
+    product = prod;
+    serialDescriptor = serial;
+
+    // we are moving from USB off to USB on, ensure USB strings are set correctly
+    TinyUSBDevice.setID(vid, pid);
+    TinyUSBDevice.setManufacturerDescriptor(manufacturer.c_str());
+    TinyUSBDevice.setProductDescriptor(product.c_str());
+    TinyUSBDevice.setSerialDescriptor(serialDescriptor.c_str());
+  }
+
+  if (mode & DuckyInterpreter::USB_MODE::STORAGE)
+  {
+    Devices::USB::MSC.mountSD();
+  }
+}
+
+void USBCore::begin(Preferences &prefs)
+{
+  registerUserConfigurableSetting(CATEGORY_USB, USB_DeviceType, USBArmyKnifeCapability::SettingType::UInt16, USB_DeviceType_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_ClassType, USBArmyKnifeCapability::SettingType::UInt16, USB_ClassType_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_DeviceVID, USBArmyKnifeCapability::SettingType::UInt16, USB_DeviceVID_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_DevicePID, USBArmyKnifeCapability::SettingType::UInt16, USB_DevicePID_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_Version, USBArmyKnifeCapability::SettingType::UInt16, USB_Version_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_DeviceVersion, USBArmyKnifeCapability::SettingType::UInt16, USB_DeviceVersion_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_DeviceManufacturer, USBArmyKnifeCapability::SettingType::String, USB_DeviceManufacturer_Default);
+  registerUserConfigurableSetting(CATEGORY_USB, USB_DeviceProductDescriptor, USBArmyKnifeCapability::SettingType::String, USB_DeviceProductDescriptor_Default);
+
+  curDeviceType = (USBDeviceType)prefs.getUShort(USB_DeviceType, USB_DeviceType_Default);
+  curClassType = (USBClassType)prefs.getUShort(USB_ClassType, USB_ClassType_Default);
+
+  // The device class coming from an NCM device isn't currently compatible when running in NCM mode
+  // As such we disable HID etc when running in NCM
+  if (curDeviceType == USBDeviceType::NCM)
+  {
+    curClassType = USBClassType::None;
+  }
+
+  vid = prefs.getUShort(USB_DeviceVID, USB_DeviceVID_Default);
+  pid = prefs.getUShort(USB_DevicePID, USB_DevicePID_Default);
+
+  Devices::USB::CDC.begin(115200);
+  Devices::USB::NCM.begin(prefs);
+  Devices::USB::HID.begin(prefs);
+  Devices::USB::MSC.begin(prefs);
+
+  // You can only set these values after the USB stack has been official started, otherwise
+  // the values get overwriten by defaults
+  if (curDeviceType != USBDeviceType::None)
+  {
+    TinyUSBDevice.setID(vid, pid); // USB_PID
+
+    const uint16_t version = prefs.getUShort(USB_Version, USB_Version_Default);
+    TinyUSBDevice.setVersion(version);
+
+    const uint16_t deviceVersion = prefs.getUShort(USB_DeviceVersion, USB_DeviceVersion_Default);
+    TinyUSBDevice.setDeviceVersion(deviceVersion);
+
+    const String manufacturerArdString = prefs.getString(USB_DeviceManufacturer, USB_DeviceManufacturer_Default);
+    manufacturer = std::string(manufacturerArdString.c_str());
+    TinyUSBDevice.setManufacturerDescriptor(manufacturer.c_str());
+
+    const String productArdString = prefs.getString(USB_DeviceProductDescriptor, USB_DeviceProductDescriptor_Default);
+    product = std::string(productArdString.c_str());
+    TinyUSBDevice.setProductDescriptor(product.c_str());
+  }
+
+  // now all our descriptors are set up we can now begin allowing the host OS to
+  // talk to us
+  tud_connect();
+
+  // we now wait up to a second for the host to 'mount' us
+  // we might not even be connected to a USB device (battery) so don't want too long
+  for (uint8_t counter = 0; counter < 10 && (!TinyUSBDevice.ready() || !TinyUSBDevice.mounted()); ++counter)
+  {
+    delay(100);
+  }
+
+  if (!TinyUSBDevice.ready() || !TinyUSBDevice.mounted())
+  {
+    Debug::Log.error(LOG_USB, "Timeout waiting for USB to mount");
+  }
+}
+
+void USBCore::reset()
+{
+  if (!TinyUSBDevice.ready())
+  {
+    Debug::Log.error(LOG_USB, "USB not ready, continuing");
+  }
+
+  if (!TinyUSBDevice.mounted())
+  {
+    Debug::Log.error(LOG_USB, "USB not mounted, continuing");
+  }
+
+  tud_disconnect();
+  delay(250);
+  tud_connect();
+  Debug::Log.info(LOG_USB, "USB reset");
+}
+
+void USBCore::loop(Preferences &prefs)
+{
+#ifndef ARDUINO_ARCH_ESP32 
+  // Manual call tud_task since on the Rp2040 we call the main loop() directly and need
+  // do ensure it's doing USB stuff. It might end up being called twice, who cares we are
+  // a USB device
+  TinyUSBDevice.task();
+#endif
+
+  Devices::USB::NCM.loop(prefs);
+  Devices::USB::HID.loop(prefs);
+  Devices::USB::MSC.loop(prefs);
+  Devices::USB::CDC.loop(prefs);
+}
+
+void USBCore::end()
+{
+  Devices::USB::CDC.end();
+  Devices::USB::NCM.end();
+  // Devices::USB::HID.end();
+  Devices::USB::MSC.end();
+}
