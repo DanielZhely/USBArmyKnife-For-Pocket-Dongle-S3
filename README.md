@@ -4,11 +4,13 @@ Compatability: Pocket-Dongle-S3 N16R8 From AliExpress **ONLY!!**
 
 What to **expect**:
 * Your device might not boot it, simple. ¯\_(ツ)_/¯
-* If it does boot, keep in mind that this release is WAY too early to use normally, even if everything functions.
+* If it does boot, keep in mind that this release is WAY too early to use normally, even if everything functions. _potential issues, see A1 below_
 * Thats it.
 
 For **testers**:
 * ABSOLUTELY make sure to email me, both me and the project will benefit a lot from help.
+
+A1 - Potential issues, like memory overflow, crashes and/or it thinking it has the PSRAM unlocked, but crashing when trying to use it, same for the 16MB flash when it tries to use it beyond 8,330,608 bytes(8MB).
 
 If it doesnt work, dont bother trying to fix it. The problem is as simple as putting an AMD CPU in an Intel socket and being confused by why it doent work.
 
