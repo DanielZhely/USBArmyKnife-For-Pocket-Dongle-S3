@@ -1,5 +1,7 @@
 Very, VERY early release of the USBArmyKnife firmware made to be simply flashed and just work, utilizing the full 16MB SPI Flash and 8MB PSRAM that the Pocket-Dongle-S3 from AliExpress provides, unlike a basic ESP32-S3 image that only enables 8MB of Flash and NO PSRAM.
 
+Compatability: Pocket-Dongle-S3 N16R8 From AliExpress **ONLY!!**
+
 What to **expect**:
 * Your device might not boot it, simple. ¯\_(ツ)_/¯
 * If it does boot, keep in mind that this release is WAY too early to use normally, even if everything functions.
