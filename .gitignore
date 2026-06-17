@@ -50,3 +50,4 @@ examples/covertstorage/disk.img
 /src/version.h
 src/version.h
 src/version.h
+compile_commands.json
