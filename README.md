@@ -3,7 +3,7 @@ Very, VERY early release of the USBArmyKnife firmware made to be simply flashed 
 Compatability: Pocket-Dongle-S3 N16R8 From AliExpress **ONLY!!**
 
 What to **expect**:
-* Your device might not boot it, simple. ¯\_(ツ)_/¯
+* Your device might not boot it, simple. ¯\\_(ツ)_/¯
 * If it does boot, keep in mind that this release is WAY too early to use normally, even if everything functions. _potential issues, see A1 below_
 * Thats it.
 
