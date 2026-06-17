@@ -48,3 +48,5 @@ packages/
 examples/covertstorage/disk.img
 /tools/Agent/mic.pcm
 /src/version.h
+src/version.h
+src/version.h
