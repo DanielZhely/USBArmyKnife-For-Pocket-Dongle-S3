@@ -43,12 +43,18 @@ _bold text means better_
 _go to this page first: https://espressif.github.io/esptool-js/ , when doing any step, allow whatever permissions the site asks for and whatever add-ons it wants to install_
 
 ## Step One - **Wipe**
-* Under '**Program**' select '**Baudrate:**' and set it to 115200 via the dropdown menu, now hold the 'Boot' button on your device and plug it in, **only stop holding when the computer detects it** then press the blue 'Connect' button and Allow the browser access to your device.
 
-* You'll see a red '**Erase Flash**' button, click it.
-![Wipe Flash](readmeAssets/dontforgetTowipeyourbackside.png)
+<ul>
+  <li>Under '<strong>Program</strong>' select '<strong>Baudrate:</strong>' and set it to 115200 via the dropdown menu. Now hold the 'Boot' button on your device and plug it in, <strong>only stop holding when the computer detects it</strong> then press the blue 'Connect' button and allow the browser access to your device.</li>
+  <br>
+  <li>You'll see a red '<strong>Erase Flash</strong>' button, click it.
+    <br><br>
+    <img src="readmeAssets/dontforgetTowipeyourbackside.png" alt="Wipe Flash" width="350">
+  </li>
+</ul>
 
 * After clicking it, look at the end of the black console for a '`Chip erase completed successfully in 3.0s`'
+
 ![Wipe Complete](readmeAssets/webterminalwipe.png)
 
 * _Wipe complete!_ Now disconnect the device and refresh the web page.
