@@ -51,13 +51,14 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
     <br><br>
     <img src="readmeAssets/dontforgetTowipeyourbackside.png" alt="Wipe Flash" width="350">
   </li>
+  <br>
+  <li>After clicking it, look at the end of the black console for a '<code>Chip erase completed successfully in 3.0s</code>'
+    <br><br>
+    <img src="readmeAssets/webterminalwipe.png" alt="Wipe Complete" width="400">
+  </li>
+  <br>
+  <li><em>Wipe complete!</em> Now disconnect the device and refresh the web page.</li>
 </ul>
-
-* After clicking it, look at the end of the black console for a '`Chip erase completed successfully in 3.0s`'
-
-![Wipe Complete](readmeAssets/webterminalwipe.png)
-
-* _Wipe complete!_ Now disconnect the device and refresh the web page.
 
 ## Step Two - **Install**
 * After refreshing the page, select a Baudrate of 115200, hold the 'Boot' button on your device and plug it in, **only stop holding when the computer detects it** then press Connect and Allow the browser access to your device.
