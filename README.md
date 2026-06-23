@@ -29,11 +29,11 @@ _bold text means better_
 | :--- | :---: | :---: |
 | SoC | ESP32-S3 | ESP32-S3 |
 | Flash Storage | 16MB | 16MB |
-| RAM | **8MB PSRAM + 512KB SRAM** | No PSRAM + 512KB SRAM |
+| RAM | 𝟴𝗠𝗕 𝗣𝗦𝗥𝗔𝗠 + 𝟱𝟭𝟮𝗞𝗕 𝗦𝗥𝗔𝗠 | No PSRAM + 512KB SRAM |
 | Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
 | Manufacturer | GNPE Development Board Factory | lilygo Official Store |
-| Price | **€11.62** | €16.43 |
-| Extras | None | **RGB LED + u.FL Antenna Connector** |
+| Price | **€**𝟭𝟭.𝟲𝟮 | €16.43 |
+| Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 + 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 |
 
 <p align="center">
   <h1><strong>HOW TO INSTALL</strong></h1>
