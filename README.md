@@ -18,6 +18,23 @@ Buy from 'GNPE Development Board Factory' Store on AliExpress.
 Link: https://www.aliexpress.com/item/1005009024098181.html?spm=a2g0o.order_list.order_list_main.22.5efa18026bG7NB 
 
 <p align="center">
+  <h1><strong>COMPARISON</strong></h1>
+</p>
+
+---
+
+_bold text means better_
+
+| Spec | Pocket Dongle S3 (N16R8) | Lilygo T-Dongle S3 |
+| :--- | :---: | :---: |
+| SoC | ESP32-S3 | ESP32-S3 |
+| Flash Storage | 16MB | 16MB |
+| RAM | **8MB PSRAM + 512KB SRAM** | No PSRAM + 512KB SRAM |
+| Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
+| Manufacturer | GNPE Development Board Factory | lilygo Official Store |
+| Price | **€11.62** | €16.43 |
+
+<p align="center">
   <h1><strong>HOW TO INSTALL</strong></h1>
 </p>
 
