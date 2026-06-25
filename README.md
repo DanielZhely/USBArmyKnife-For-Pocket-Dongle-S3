@@ -81,7 +81,7 @@ Hard resetting via RTS pin...`'. When it does, wait 5 seconds, unplug the device
 To boot into USBArmyKnife, just plug the device into any USB port that has power and see that it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
 
 ## Troubleshooting:
-* In the web flasher, for _Flash Size,_ select _keep_
+* _everything works..._
 
 ## Plans for the future:
 * Add a second bar in the Web UI that shows PSRAM Usage alongside the internal SRAM Usage.
