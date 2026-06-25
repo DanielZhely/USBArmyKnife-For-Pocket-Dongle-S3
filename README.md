@@ -27,7 +27,7 @@ _bold text means better_
 
 | Spec | Pocket Dongle S3 (N16R8) | Lilygo T-Dongle S3 |
 | :--- | :---: | :---: |
-| SoC | ESP32-S3 | ESP32-S3 |
+| MCU | ESP32-S3 | ESP32-S3 |
 | Flash Storage | 16MB | 16MB |
 | RAM | 𝟴𝗠𝗕 𝗣𝗦𝗥𝗔𝗠 **+** 𝟱𝟭𝟮𝗞𝗕 𝗦𝗥𝗔𝗠 | No PSRAM + 512KB SRAM |
 | Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
@@ -64,11 +64,11 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
 ## Step Two - **Install**
 * After refreshing the page, select a Baudrate of 115200, hold the 'Boot' button on your device and plug it in, **only stop holding when the computer detects it** then press Connect and Allow the browser access to your device.
 
-* Look under the '**Flash Address**' text, you'll see a box with the text '0x1000', remove it and in its place type '_0x0000_', then look to the right, under '**File**', click '**Browse...**', open the extracted folder containing all the bin files and _only select_ '**bootloader.bin**', then press the blue button saying '**Add File**' TWICE. On the second Address, type '_0x8000_' and add the file named '**partitions.bin**', then on the last address, type '_0x10000_' (**NOT** 0x1000) and add the last file named '**firmware.bin**'.
+* Look under the '**Flash Address**' text, you'll see a box with the text '0x1000', remove it and in its place type '_0x0000_', then look to the right, under '**File**', click '**Browse...**', open the extracted folder containing all the bin files and _only select_ '**bootloader.bin**', then press the blue button saying '**Add File**' 3 TIMES. On the second Address, type '_0x8000_' and add the file named '**partitions.bin**', on the third address type '_0xE000_' (**NOT** 0xe000) and add the file named '**boot_app0.bin**', then on the fourth address, type '_0x10000_' (**NOT** 0x1000) and add the last file named '**firmware.bin**'.
 
 * _Overview_:
 ![Webflasher Screen](readmeAssets/webadresses.png)
-_leave the flash mode/frequency/size options as they are_
+_leave the flash mode and frequency options as they are, only set size to 16MB_
 
 * Then simply press the blue button '**Program**' that's near the console and wait till it says '`Wrote 2310512 bytes (1540648 compressed) at 0x10000 in 12.405 seconds.
 File  md5: 40a42ecc663aee1d6b8473f653ef63bf
@@ -80,10 +80,13 @@ Hard resetting via RTS pin...`'. When it does, wait 5 seconds, unplug the device
 ## Congratulations, device flashed successfully!
 To boot into USBArmyKnife, just plug the device into any USB port that has power and see that it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
 
+## Troubleshooting:
+* In the web flasher, for _Flash Size,_ select _keep_
+
 ## Plans for the future:
 * Add a second bar in the Web UI that shows PSRAM Usage alongside the internal SRAM Usage.
 
-* Something else that **really** emphasizes the bigger storage and more PSRAM.
+* Video tutorial.
 
 Check out the original project by i-am-shodan: https://github.com/i-am-shodan/USBArmyKnife/tree/master
 
