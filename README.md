@@ -13,7 +13,7 @@ The Pocket Dongle S3 is a clone of the Lilygo T-Dongle S3. It was supposed to be
 
 Pocket-Dongle-S3 N16R8 **ONLY!!**
 
-Buy from 'GNPE Development Board Factory' Store on AliExpress.
+Buy from 'GNPE Development Board Factory' Store on AliExpress only.
 
 Link: https://www.aliexpress.com/item/1005009024098181.html?spm=a2g0o.order_list.order_list_main.22.5efa18026bG7NB 
 
@@ -33,7 +33,7 @@ _bold text means better_
 | Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
 | Manufacturer | GNPE Development Board Factory | lilygo Official Store |
 | Price | **€**𝟭𝟭.𝟲𝟮 | €16.43 |
-| Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 **+** 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 𝗢𝗻𝗯𝗼𝗮𝗿𝗱 |
+| Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 **+** 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 |
 
 <p align="center">
   <h1><strong>HOW TO INSTALL</strong></h1>
