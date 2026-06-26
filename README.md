@@ -66,9 +66,15 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
 
 * Look under the '**Flash Address**' text, you'll see a box with the text '0x1000', remove it and in its place type '_0x0000_', then look to the right, under '**File**', click '**Browse...**', open the extracted folder containing all the bin files and _only select_ '**bootloader.bin**', then press the blue button saying '**Add File**' 3 TIMES. On the second Address, type '_0x8000_' and add the file named '**partitions.bin**', on the third address type '_0xE000_' (**NOT** 0xe000) and add the file named '**boot_app0.bin**', then on the fourth address, type '_0x10000_' (**NOT** 0x1000) and add the last file named '**firmware.bin**'.
 
-* _Overview_:
-![Webflasher Screen](readmeAssets/webadresses.png)
-_leave the flash mode and frequency options as they are, only set size to 16MB_
+<ul>
+  <li>
+    <strong>Overview:</strong>
+    <br><br>
+    <img src="readmeAssets/webadresses.png" alt="Flash Layout" width="550">
+    <br><br>
+    <em>Leave the flash mode and frequency options as they are, only set size to 16MB.</em>
+  </li>
+</ul>
 
 * Then simply press the blue button '**Program**' that's near the console and wait till it says '`Wrote 2310512 bytes (1540648 compressed) at 0x10000 in 12.405 seconds.
 File  md5: 40a42ecc663aee1d6b8473f653ef63bf
