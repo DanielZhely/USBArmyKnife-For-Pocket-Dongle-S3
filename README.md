@@ -86,6 +86,23 @@ Hard resetting via RTS pin...`'. When it does, wait 5 seconds, unplug the device
 ## Congratulations, device flashed successfully!
 To boot into USBArmyKnife, just plug the device into any USB port that has power and see that it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
 
+## Extras & Goodies:
+| Name | Function |
+| :---: | :---: |
+| DuckyScript Executer | DuckyScript executer based on the File System API to easily execute scripts on the device without using the web interface. |
+| Fake Login Portal | Makes an access point that users can connect to and be redirected to your web page so they do what is shown on that web page. |
+| _Testing..._ | _Project 3 is currently in testing._ |
+| _Testing..._ | _Project 4 is currently in testing._ |
+| _Testing..._ | _Project 5 is currently in testing._ |
+| _Testing..._ | _Project 6 is currently in testing._ |
+| _Testing..._ | _Project 7 is currently in testing._ |
+| Progress Bar | Simple green progress bar that fills the entire screen, useful for multistage tasks or showing that something is being performed, only visual. |
+| _Testing..._ | _Project 9 is currently in testing._ |
+| _Testing..._ | _Project 10 is currently in testing._ |
+| _Testing..._ | _Project 11 is currently in testing._ |
+| _Testing..._ | _Project 12 is currently in testing._ |
+| _Testing..._ | _Project 13 is currently in testing._ |
+
 ## Troubleshooting:
 * _everything works..._
 
