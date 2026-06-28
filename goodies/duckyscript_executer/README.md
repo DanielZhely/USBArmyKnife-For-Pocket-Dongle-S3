@@ -4,6 +4,7 @@ DuckyScript executer based on the File System API to easily execute scripts on t
 
 ## How to set up:
 1. Copy autorun.ds on the SD card.
+2. Unplug your device from power and plug it back in.
 
 ## How to Use:
 1. Plug in your device.
