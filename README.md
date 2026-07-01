@@ -70,7 +70,7 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
   <li>
     <strong>Overview:</strong>
     <br><br>
-    <img src="readmeAssets/webadresses.png" alt="Flash Layout" width="550">
+    <img src="readmeAssets/webaddresses.png" alt="Flash Layout" width="550">
     <br><br>
     <em>Leave the flash mode and frequency options as they are, only set size to 16MB.</em>
   </li>
@@ -92,7 +92,7 @@ _the bold ones are ones i strongly recommend_
 
 | Name | Function |
 | :---: | :---: |
-| **DuckyScript Executer** | **DuckyScript executer based on the File System API to easily execute scripts on the device without using the web interface.** |
+| **DuckyScript Executor** | **DuckyScript executer based on the File System API to easily execute scripts on the device without using the web interface.** |
 | Fake Login Portal | Makes an access point that users can connect to and be redirected to your web page so they do what is shown on that web page. |
 | _Testing..._ | _Project 3 is currently in testing._ |
 | LCD Flashlight | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
