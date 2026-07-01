@@ -33,7 +33,8 @@ _bold text means better_
 | Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
 | Manufacturer | GNPE Development Board Factory | lilygo Official Store |
 | Price | **€**𝟭𝟭.𝟲𝟮 | €16.43 |
-| Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 **+** 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 |
+| Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 **+** 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 **+** 𝗤𝗪𝗜𝗜𝗖 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 |
+| I/O | 𝗦𝘁𝗮𝗻𝗱𝗮𝗿𝗱 𝗚𝗣𝗜𝗢 𝗣𝗮𝗱𝘀 𝟭-𝟵, 𝟰𝟬-𝟰𝟱, 𝟱𝗩, 𝟯𝗩𝟯, 𝗚𝗡𝗗 | No GPIO Pads |
 
 <p align="center">
   <h1><strong>HOW TO INSTALL</strong></h1>
