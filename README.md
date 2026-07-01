@@ -95,7 +95,7 @@ _the bold ones are ones i strongly recommend_
 | **DuckyScript Executer** | **DuckyScript executer based on the File System API to easily execute scripts on the device without using the web interface.** |
 | Fake Login Portal | Makes an access point that users can connect to and be redirected to your web page so they do what is shown on that web page. |
 | _Testing..._ | _Project 3 is currently in testing._ |
-| _Testing..._ | _Project 4 is currently in testing._ |
+| LCD Flashlight | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
 | _Testing..._ | _Project 5 is currently in testing._ |
 | _Testing..._ | _Project 6 is currently in testing._ |
 | _Testing..._ | _Project 7 is currently in testing._ |
@@ -105,6 +105,7 @@ _the bold ones are ones i strongly recommend_
 | _Testing..._ | _Project 11 is currently in testing._ |
 | _Testing..._ | _Project 12 is currently in testing._ |
 | _Testing..._ | _Project 13 is currently in testing._ |
+| _Testing..._ | _Project 14 is currently in testing._ |
 
 ## Troubleshooting:
 * _everything works..._
