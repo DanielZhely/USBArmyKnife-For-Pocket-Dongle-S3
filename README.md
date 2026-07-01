@@ -99,14 +99,12 @@ _the bold ones are ones i strongly recommend_
 | [LCD Flashlight](/goodies/lcd_flashlight/README.md) | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
 | _Testing..._ | _Project 5 is currently in testing._ |
 | _Testing..._ | _Project 6 is currently in testing._ |
-| _Testing..._ | _Project 7 is currently in testing._ |
 | [Progress Bar](/goodies/progressbar/README.md) | Simple green progress bar that fills the entire screen, useful for multistage tasks or showing that something is being performed, only visual. |
+| _Testing..._ | _Project 8 is currently in testing._ |
 | _Testing..._ | _Project 9 is currently in testing._ |
 | _Testing..._ | _Project 10 is currently in testing._ |
 | _Testing..._ | _Project 11 is currently in testing._ |
 | _Testing..._ | _Project 12 is currently in testing._ |
-| _Testing..._ | _Project 13 is currently in testing._ |
-| _Testing..._ | _Project 14 is currently in testing._ |
 
 ## Troubleshooting:
 * _everything works..._
