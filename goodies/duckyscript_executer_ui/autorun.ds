@@ -1,0 +1,41 @@
+DISPLAY_CLEAR
+DELAY 0100
+DISPLAY_TEXT 1 0 DuckyScipt Launcher
+
+VAR $FILE_INDEX = 0
+
+LOAD_DS_FILES_FROM_SD()
+
+WHILE ( FILE_INDEX_VALID() == TRUE )
+    DISPLAY_TEXT 1 28 #_FILE_INDEX_FILE_NAME_
+    DISPLAY_TEXT 1 55 Click > Next file
+    DISPLAY_TEXT 1 65 Hold > Run
+    WAIT_FOR_BUTTON_PRESS
+
+    IF (BUTTON_SHORT_PRESS())
+        DISPLAY_CLEAR
+        DISPLAY_TEXT 1 0 DuckyScipt Launcher
+        $FILE_INDEX = ( $FILE_INDEX + 1 )
+
+    ELSE IF (BUTTON_LONG_PRESS())
+        DISPLAY_CLEAR
+        DISPLAY_TEXT 1 0 DuckyScipt Launcher
+        DISPLAY_TEXT 1 35 Run #_FILE_INDEX_FILE_NAME_ ?
+        DISPLAY_TEXT 1 55 Click > Back
+        DISPLAY_TEXT 1 65 Hold > Run
+        WAIT_FOR_BUTTON_PRESS
+
+        IF (BUTTON_LONG_PRESS() == 1)
+            DISPLAY_CLEAR
+            RUN_PAYLOAD #_FILE_INDEX_FILE_NAME_
+        ELSE IF (BUTTON_SHORT_PRESS())
+            DISPLAY_CLEAR
+            DISPLAY_TEXT 1 0 DuckyScipt Launcher
+            DISPLAY_TEXT 0 28 #_FILE_INDEX_FILE_NAME_
+            DISPLAY_TEXT 0 55 Click > Next file
+            DISPLAY_TEXT 0 65 Hold > Run
+        END_IF
+    END_IF
+END_WHILE
+
+RESTART_PAYLOAD
