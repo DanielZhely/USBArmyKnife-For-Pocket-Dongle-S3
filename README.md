@@ -3,7 +3,7 @@
 </p>
 
 ---
-The Pocket Dongle S3 is a clone of the Lilygo T-Dongle S3. It was supposed to be a cheap clone of the Lilygo, but turned out to have better raw hardware onboard. The official build of the USBArmyKnife does support the Pocket Dongle S3, but only by using the _generic_ ESP32 S3 build that is provided alongside the 6 other builds, _yuck_. The other devices have the firmware built completely around them, _all except the Pocket Dongle S3_. So I took matters into my own hands and strapped together a new firmware with support for the 16MB Flash Storage and more importantly, the _8MB of PSRAM_ that it features. _What will you do with 2x the storage and approx. 25.6x of PSRAM?_ It's all up for you to decide!
+The Pocket Dongle S3 is a clone of the Lilygo T-Dongle S3. It was supposed to be a cheap clone of the Lilygo, but turned out to have better raw hardware onboard. The official build of the USBArmyKnife does support the Pocket Dongle S3, but only by using the _generic_ ESP32-S3 build that is provided alongside the 6 other builds, _yuck_. The other devices have the firmware built completely around them, _all except the Pocket Dongle S3_. So I decided to strap together a new firmware with support for the 16MB Flash Storage and more importantly, the _8MB of PSRAM_ that it features. _What will you do with 2x the storage and approx. 25.6x the PSRAM?_ It's all up for you to decide!
 
 <p align="center">
   <h1><strong>COMPATIBILITY:</strong></h1>
@@ -11,9 +11,9 @@ The Pocket Dongle S3 is a clone of the Lilygo T-Dongle S3. It was supposed to be
 
 ---
 
-Pocket-Dongle-S3 N16R8 **ONLY!!**
+'Pocket-Dongle-S3 N16R8' **ONLY!!**
 
-Buy from 'GNPE Development Board Factory' Store on AliExpress only.
+Only buy from 'GNPE Development Board Factory' Store on AliExpress.
 
 Link: https://www.aliexpress.com/item/1005009024098181.html?spm=a2g0o.order_list.order_list_main.22.5efa18026bG7NB 
 
@@ -23,7 +23,7 @@ Link: https://www.aliexpress.com/item/1005009024098181.html?spm=a2g0o.order_list
 
 ---
 
-_bold text means better_
+_bold text = better_
 
 | Spec | Pocket Dongle S3 (N16R8) | Lilygo T-Dongle S3 |
 | :--- | :---: | :---: |
@@ -47,7 +47,7 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
 ## Step One - **Wipe**
 
 <ul>
-  <li>Under '<strong>Program</strong>' select '<strong>Baudrate:</strong>' and set it to 115200 via the dropdown menu. Now hold the 'Boot' button on your device and plug it in, <strong>only stop holding when the computer detects it</strong> then press the blue 'Connect' button and allow the browser access to your device.</li>
+  <li>Under '<strong>Program</strong>' select '<strong>Baudrate:</strong>' and set it to 115200 via the dropdown menu. Now hold the 'Boot' button on your device and plug it in, <strong>only stop holding when the computer detects it</strong>, then press the blue 'Connect' button and allow the browser access to your device.</li>
   <br>
   <li>You'll see a red '<strong>Erase Flash</strong>' button, click it.
     <br><br>
@@ -63,9 +63,9 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
 </ul>
 
 ## Step Two - **Install**
-* After refreshing the page, select a Baudrate of 115200, hold the 'Boot' button on your device and plug it in, **only stop holding when the computer detects it** then press Connect and Allow the browser access to your device.
+* After refreshing the page, select a Baudrate of 115200, hold the 'Boot' button on your device and plug it in, **only stop holding when the computer detects it** then press Connect and Allow the browser to access your device.
 
-* Look under the '**Flash Address**' text, you'll see a box with the text '0x1000', remove it and in its place type '_0x0000_', then look to the right, under '**File**', click '**Browse...**', open the extracted folder containing all the bin files and _only select_ '**bootloader.bin**', then press the blue button saying '**Add File**' 3 TIMES. On the second Address, type '_0x8000_' and add the file named '**partitions.bin**', on the third address type '_0xE000_' (**NOT** 0xe000) and add the file named '**boot_app0.bin**', then on the fourth address, type '_0x10000_' (**NOT** 0x1000) and add the last file named '**firmware.bin**'.
+* Look under the '**Flash Address**' text, you'll see a box with the text '0x1000', remove the text and in its place type '_0x0000_', then look to the right, under '**File**', click '**Browse...**', open the extracted folder containing all the .bin files and _only select_ '**bootloader.bin**', then press the blue button saying '**Add File**' 3 TIMES. On the second Address, type '_0x8000_' and add the file named '**partitions.bin**', on the third address type '_0xE000_' (**NOT** 0xe000) and add the file named '**boot_app0.bin**', then on the fourth address, type '_0x10000_' (**NOT** 0x1000) and add the last file, named '**firmware.bin**'.
 
 <ul>
   <li>
@@ -73,7 +73,7 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
     <br><br>
     <img src="readmeAssets/webaddresses.png" alt="Flash Layout" width="550">
     <br><br>
-    <em>Leave the flash mode and frequency options as they are, only set size to 16MB.</em>
+    <em>leave the flash mode and frequency options as they are, only set size to 16MB</em>
   </li>
 </ul>
 
@@ -85,11 +85,11 @@ Leaving...
 Hard resetting via RTS pin...`'. When it does, wait 5 seconds, unplug the device and close the page.
 
 # Congratulations, device flashed successfully!
-To boot into USBArmyKnife, just plug the device into any USB port that has power and see that it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
+To boot into USBArmyKnife, just plug the device into any USB port that has power and see if it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
 
 # Extras & Goodies:
 
-_the bold ones are ones i strongly recommend_
+_bold text = strongly recommended_
 
 | Name | Function |
 | :---: | :---: |
@@ -112,6 +112,4 @@ _the bold ones are ones i strongly recommend_
 
 * Video tutorial.
 
-Check out the original project by i-am-shodan: https://github.com/i-am-shodan/USBArmyKnife/tree/master
-
-𝗥𝗲𝗮𝗰𝗵 𝗼𝘂𝘁 𝘁𝗼 "𝗱𝗮𝗻𝗶𝗲𝗹.𝗻𝟭𝟲𝗿𝟴𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁@𝗴𝗺𝗮𝗶𝗹.𝗰𝗼𝗺" 𝗶𝗳 𝘆𝗼𝘂 𝗽𝗿𝗼𝘃𝗶𝗱𝗲 𝗳𝗲𝗲𝗱𝗯𝗮𝗰𝗸. 𝗧𝗵𝗮𝗻𝗸 𝘆𝗼𝘂.
+Check out the original project by 'i-am-shodan' : https://github.com/i-am-shodan/USBArmyKnife/tree/master
