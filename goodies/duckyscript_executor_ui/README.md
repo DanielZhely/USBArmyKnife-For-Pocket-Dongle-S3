@@ -11,6 +11,7 @@ DuckyScript executor based on the File System API to easily execute scripts on t
 2. Use the button to select a file to run.
 3. Hold down the button to select a file.
 
-**Note:** Hold down the button for no less than 2 seconds and release it, the text on the screen won't change until you release the button.
+## **Note:**
+Hold down the button for no less than 2 seconds and release it, the text on the screen won't change until you release the button.
 
 **Made by** 'DanielZhely', **inspired by** 'i-am-shodan' 's **idea. Compatability verified by** 'DanielZhely'**.**

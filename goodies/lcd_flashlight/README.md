@@ -9,4 +9,5 @@ Simple script that shows a white PNG on the screen that acts a fairly bright fla
 2. Execute the 'flashlight.ds' script via the Web UI or using the [DuckyScript Executor](/goodies/duckyscript_executor_ui/README.md)
 3. To stop it, press the button to reset your device.
 
+## **Note:**
 **Made by** 'DanielZhely'**. Compatability verified by** 'DanielZhely'**.**
