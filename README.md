@@ -1,12 +1,12 @@
 <p align="center">
-  <h1><strong>INTRODUCTION</strong></h1>
+  <h1><strong>INTRODUCTION:</strong></h1>
 </p>
 
 ---
 The Pocket Dongle S3 is a clone of the Lilygo T-Dongle S3. It was supposed to be a cheap clone of the Lilygo, but turned out to have better raw hardware onboard. The official build of the USBArmyKnife does support the Pocket Dongle S3, but only by using the _generic_ ESP32 S3 build that is provided alongside the 6 other builds, _yuck_. The other devices have the firmware built completely around them, _all except the Pocket Dongle S3_. So I took matters into my own hands and strapped together a new firmware with support for the 16MB Flash Storage and more importantly, the _8MB of PSRAM_ that it features. _What will you do with 2x the storage and approx. 25.6x of PSRAM?_ It's all up for you to decide!
 
 <p align="center">
-  <h1><strong>COMPATIBILITY</strong></h1>
+  <h1><strong>COMPATIBILITY:</strong></h1>
 </p>
 
 ---
@@ -18,7 +18,7 @@ Buy from 'GNPE Development Board Factory' Store on AliExpress only.
 Link: https://www.aliexpress.com/item/1005009024098181.html?spm=a2g0o.order_list.order_list_main.22.5efa18026bG7NB 
 
 <p align="center">
-  <h1><strong>COMPARISON</strong></h1>
+  <h1><strong>COMPARISON:</strong></h1>
 </p>
 
 ---
@@ -37,7 +37,7 @@ _bold text means better_
 | I/O | 𝗦𝘁𝗮𝗻𝗱𝗮𝗿𝗱 𝗚𝗣𝗜𝗢 𝗣𝗮𝗱𝘀 𝟭-𝟵, 𝟰𝟬-𝟰𝟱, 𝟱𝗩, 𝟯𝗩𝟯, 𝗚𝗡𝗗 | No GPIO Pads |
 
 <p align="center">
-  <h1><strong>HOW TO INSTALL</strong></h1>
+  <h1><strong>HOW TO INSTALL:</strong></h1>
 </p>
 
 ---
@@ -84,10 +84,10 @@ Hash of data verified.
 Leaving...
 Hard resetting via RTS pin...`'. When it does, wait 5 seconds, unplug the device and close the page.
 
-## Congratulations, device flashed successfully!
+# Congratulations, device flashed successfully!
 To boot into USBArmyKnife, just plug the device into any USB port that has power and see that it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
 
-## Extras & Goodies:
+# Extras & Goodies:
 
 _the bold ones are ones i strongly recommend_
 
@@ -107,10 +107,7 @@ _the bold ones are ones i strongly recommend_
 | _Testing..._ | _Project 12 is currently in testing._ |
 | _Testing..._ | _Project 13 is currently in testing._ |
 
-## Troubleshooting:
-* _everything works..._
-
-## Plans for the future:
+# Plans for the future:
 * Add a second bar in the Web UI that shows PSRAM Usage alongside the internal SRAM Usage.
 
 * Video tutorial.
