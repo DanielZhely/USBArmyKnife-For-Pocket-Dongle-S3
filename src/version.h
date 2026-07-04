@@ -1,2 +1,2 @@
 #pragma once
-const char GIT_COMMIT_HASH[] = "b5a5e8eee570a8bd9bee67d508e684f6139ee5f6";
+const char GIT_COMMIT_HASH[] = "b8cb167fd9e789148c0a1a9f1548869e2493ca29";
