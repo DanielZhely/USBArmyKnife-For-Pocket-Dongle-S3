@@ -96,7 +96,7 @@ _the bold ones are ones i strongly recommend_
 | [**DuckyScript Executor**](/goodies/duckyscript_executor_ui) | **DuckyScript executor based on the File System API to easily execute scripts on the device without using the web interface.** |
 | [Fake Login Portal](/goodies/fake_login_portal) | Makes an access point that users can connect to and be redirected to your web page so they do what is shown on that web page. |
 | _Testing..._ | _Project 3 is currently in testing._ |
-| [LCD Flashlight](/goodies/lcd_flashlight/README.md) | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
+| [LCD Flashlight](/goodies/lcd_flashlight) | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
 | _Testing..._ | _Project 5 is currently in testing._ |
 | _Testing..._ | _Project 6 is currently in testing._ |
 | [Progress Bar](/goodies/progressbar) | Simple green progress bar that fills the entire screen, useful for multistage tasks or showing that something is being performed, only visual. |
