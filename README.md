@@ -32,10 +32,6 @@ _bold text = better_
 | RAM | 𝟴𝗠𝗕 𝗣𝗦𝗥𝗔𝗠 **+** 𝟱𝟭𝟮𝗞𝗕 𝗦𝗥𝗔𝗠 | No PSRAM + 512KB SRAM |
 | Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
 | Manufacturer | GNPE Development Board Factory | lilygo Official Store |
-<<<<<<< HEAD
-| Price | **€**𝟭𝟮.𝟲𝟲(incl. delivery/taxes) | €21.79 (incl. delivery/taxes) |
-=======
->>>>>>> 31c6489 (removed pricing and added higher quality pics)
 | Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 **+** 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 **+** 𝗤𝗪𝗜𝗜𝗖 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 |
 | I/O | 𝗦𝘁𝗮𝗻𝗱𝗮𝗿𝗱 𝗚𝗣𝗜𝗢 𝗣𝗮𝗱𝘀 𝟭-𝟵, 𝟰𝟬-𝟰𝟱, 𝟱𝗩, 𝟯𝗩𝟯, 𝗚𝗡𝗗 | No GPIO Pads |
 
@@ -80,11 +76,9 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
   </li>
 </ul>
 
-* Then simply press the blue button '**Program**' that's near the console.
-
 <ul>
   <li>
-    <strong>Wait for the following to appear:</strong>
+    <strong>Then simply press the blue button '**Program**' that's near the console and wait for the following to appear:</strong>
     <br><br>
     <img src="readmeAssets/webflashdoneHD.png" alt="Flash Layout" width="550">
     <br><br>
