@@ -80,7 +80,7 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
   <li>
     Then simply press the blue button '𝗣𝗿𝗼𝗴𝗿𝗮𝗺' that's near the console and wait for the following to appear:
     <br><br>
-    <img src="readmeAssets/webflashdoneHD.png" alt="Flash Layout" width="550">
+    <img src="readmeAssets/webflashdoneHD.png" alt="Flash Done" width="550">
     <br><br>
     When it does, wait 5 seconds, unplug the device and close the page.
   </li>
