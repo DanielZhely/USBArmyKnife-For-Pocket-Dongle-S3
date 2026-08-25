@@ -32,7 +32,10 @@ _bold text = better_
 | RAM | 𝟴𝗠𝗕 𝗣𝗦𝗥𝗔𝗠 **+** 𝟱𝟭𝟮𝗞𝗕 𝗦𝗥𝗔𝗠 | No PSRAM + 512KB SRAM |
 | Display | 0.96' 160x80 65k Color LCD  | 0.96' 160x80 65k Color LCD |
 | Manufacturer | GNPE Development Board Factory | lilygo Official Store |
+<<<<<<< HEAD
 | Price | **€**𝟭𝟮.𝟲𝟲(incl. delivery/taxes) | €21.79 (incl. delivery/taxes) |
+=======
+>>>>>>> 31c6489 (removed pricing and added higher quality pics)
 | Extras | None | 𝗥𝗚𝗕 𝗟𝗘𝗗 **+** 𝘂.𝗙𝗟 𝗔𝗻𝘁𝗲𝗻𝗻𝗮 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 **+** 𝗤𝗪𝗜𝗜𝗖 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗼𝗿 |
 | I/O | 𝗦𝘁𝗮𝗻𝗱𝗮𝗿𝗱 𝗚𝗣𝗜𝗢 𝗣𝗮𝗱𝘀 𝟭-𝟵, 𝟰𝟬-𝟰𝟱, 𝟱𝗩, 𝟯𝗩𝟯, 𝗚𝗡𝗗 | No GPIO Pads |
 
@@ -54,9 +57,9 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
     <img src="readmeAssets/dontforgetTowipeyourbackside.png" alt="Wipe Flash" width="350">
   </li>
   <br>
-  <li>After clicking it, look at the end of the black console for a '<code>Chip erase completed successfully in 3.0s</code>'
+  <li>After clicking it, look at the end of the black console for a '<code>Chip erase completed successfully.</code>'
     <br><br>
-    <img src="readmeAssets/webterminalwipe.png" alt="Wipe Complete" width="400">
+    <img src="readmeAssets/webterminalwipeHD.png" alt="Wipe Complete" width="400">
   </li>
   <br>
   <li><em>Wipe complete!</em> Now disconnect the device and refresh the web page.</li>
@@ -77,23 +80,26 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
   </li>
 </ul>
 
-* Then simply press the blue button '**Program**' that's near the console and wait till it says '`Wrote 2310512 bytes (1540648 compressed) at 0x10000 in 12.405 seconds.
-File  md5: 40a42ecc663aee1d6b8473f653ef63bf
-Flash md5: 40a42ecc663aee1d6b8473f653ef63bf
-Hash of data verified.
-Leaving...
-Hard resetting via RTS pin...`'. When it does, wait 5 seconds, unplug the device and close the page.
+* Then simply press the blue button '**Program**' that's near the console.
+
+<ul>
+  <li>
+    <strong>Wait for the following to appear:</strong>
+    <br><br>
+    <img src="readmeAssets/webflashdoneHD.png" alt="Flash Layout" width="550">
+    <br><br>
+    <em>When it does, wait 5 seconds, unplug the device and close the page.</em>
+  </li>
+</ul>
 
 # Congratulations, device flashed successfully!
 To boot into USBArmyKnife, just plug the device into any USB port that has power and see if it's booted on the LCD. To control it, open the Wi-Fi settings on a Smart Watch/Phone/Tablet/Computer and look for a network named '**iPhone14**' (_yes, really_), connect to it and use the password '**password**', then open a web browser and in the URL Bar (**NOT Search Bar**) type '**4.3.2.1:8080**' and you're in, _enjoy_!
 
 # Extras & Goodies:
 
-_bold text = strongly recommended_
-
 | Name | Function |
 | :---: | :---: |
-| [**DuckyScript Executor**](/goodies/duckyscript_executor_ui) | **DuckyScript executor based on the File System API to easily execute scripts on the device without using the web interface.** |
+| [**DuckyScript Executor**](/goodies/duckyscript_executor_ui) | **DuckyScript executor based on the File System API to easily execute scripts on the device without using the web interface.** (_strongly recommended_) |
 | [Fake Login Portal](/goodies/fake_login_portal) | Makes an access point that users can connect to and be redirected to your web page so they do what is shown on that web page. |
 | _Testing..._ | _Project 3 is currently in testing._ |
 | [LCD Flashlight](/goodies/lcd_flashlight) | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
@@ -106,10 +112,5 @@ _bold text = strongly recommended_
 | _Testing..._ | _Project 11 is currently in testing._ |
 | _Testing..._ | _Project 12 is currently in testing._ |
 | _Testing..._ | _Project 13 is currently in testing._ |
-
-# Plans for the future:
-* Add a second bar in the Web UI that shows PSRAM Usage alongside the internal SRAM Usage.
-
-* Video tutorial.
 
 Check out the original project by 'i-am-shodan' : https://github.com/i-am-shodan/USBArmyKnife/tree/master
