@@ -98,13 +98,12 @@ To boot into USBArmyKnife, just plug the device into any USB port that has power
 | _Testing..._ | _Project 3 is currently in testing._ |
 | [LCD Flashlight](/goodies/lcd_flashlight) | Simple script that shows a white PNG on the screen that acts a fairly bright flashlight. |
 | _Testing..._ | _Project 5 is currently in testing._ |
-| _Testing..._ | _Project 6 is currently in testing._ |
 | [Progress Bar](/goodies/progressbar) | Simple green progress bar that fills the entire screen, useful for multistage tasks or showing that something is being performed, only visual. |
 | [Rickroll (Onscreen)](/goodies/onscreen_rickroll) | Shows 3 frames of the famous Rickroll on the display of the device. |
+| _Testing..._ | _Project 8 is currently in testing._ |
 | _Testing..._ | _Project 9 is currently in testing._ |
 | _Testing..._ | _Project 10 is currently in testing._ |
 | _Testing..._ | _Project 11 is currently in testing._ |
 | _Testing..._ | _Project 12 is currently in testing._ |
-| _Testing..._ | _Project 13 is currently in testing._ |
 
 Check out the original project by 'i-am-shodan' : https://github.com/i-am-shodan/USBArmyKnife/tree/master
