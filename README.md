@@ -82,7 +82,7 @@ _go to this page first: https://espressif.github.io/esptool-js/ , when doing any
     <br><br>
     <img src="readmeAssets/webflashdoneHD.png" alt="Flash Layout" width="550">
     <br><br>
-    <em>When it does, wait 5 seconds, unplug the device and close the page.</em>
+    When it does, wait 5 seconds, unplug the device and close the page.
   </li>
 </ul>
 
